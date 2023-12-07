@@ -1,4 +1,4 @@
-import express from "express";
+/* import express from "express";
 import dbConnection from "./config/db.js";
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -15,6 +15,35 @@ app.use((req, res, next) => {
 });
 
 app.use(cors());
+dotenv.config();
+dbConnection();
+
+app.use(express.static('public'));
+app.use('/', productRoute);
+app.use('/', collectionRoute);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running at port ${PORT}`);
+});
+ */
+import express from "express";
+import dbConnection from "./config/db.js";
+import dotenv from 'dotenv';
+import cors from 'cors';
+import productRoute from "./routes/productsRoutes.js"
+import collectionRoute from "./routes/collectionRoutes.js"
+
+const app = express();
+
+app.use(cors())
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  next();
+});
+
 dotenv.config();
 dbConnection();
 

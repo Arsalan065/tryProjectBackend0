@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin:"*",
+        origin:"https://try-project-admin-edzntrz7d-arsalans-projects-9d6fc06e.vercel.app",
         credentials:true,
         exposedHeaders: ['Content-Length', 'Apigw-Requestid', 'Access-Control-Allow-Origin'],
 

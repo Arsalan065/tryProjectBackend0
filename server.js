@@ -38,7 +38,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin:`https://try-project-admin-iy9cv9okr-arsalans-projects-9d6fc06e.vercel.app/`,
+        origin:`https://try-project-admin-aaynitps4-arsalans-projects-9d6fc06e.vercel.app/`,
         credentials:true,
     }
 ))

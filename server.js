@@ -43,13 +43,7 @@ app.use(cors(
         credentials:true,
     }
 ))
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://try-project-admin-edzntrz7d-arsalans-projects-9d6fc06e.vercel.app');
-    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS, PATCH, DELETE, POST, PUT');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    next();
-});
+
 
 
 

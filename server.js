@@ -39,7 +39,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin:`https://try-project-admin.vercel.app/`,
+        origin:`https://try-project-admin.vercel.app`,
         credentials:true,
     }
 ))

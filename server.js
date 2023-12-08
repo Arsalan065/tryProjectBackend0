@@ -12,7 +12,7 @@ app.use(cors(
     {
         origin:"https://try-project-admin-edzntrz7d-arsalans-projects-9d6fc06e.vercel.app",
         credentials:true,
-        allowedHeaders: ['Content-Type', 'Authorization'],
+        exposedHeaders: ['Content-Length', 'Apigw-Requestid'],
     }
 ))
 

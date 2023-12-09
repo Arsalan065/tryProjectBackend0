@@ -29,10 +29,10 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
 app.use(express.static('public'));
 
-app.use('/api', createProxyMiddleware({
+/* app.use('/api', createProxyMiddleware({
     target: 'https://indigo-python-tam.cyclic.app', // Adjust the target based on your backend server's address
     changeOrigin: true,
-}));
+})); */
 
 app.use('/', productRoute);
 app.use('/', collectionRoute);

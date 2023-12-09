@@ -5,7 +5,7 @@ import cors from 'cors';
 import productRoute from "./routes/productsRoutes.js"
 import collectionRoute from "./routes/collectionRoutes.js"
 import bodyParser from 'body-parser';
-const { createProxyMiddleware } = require('http-proxy-middleware');
+import { createProxyMiddleware} from 'http-proxy-middleware';
 const app = express();
 
 app.use(cors(
